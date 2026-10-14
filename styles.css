@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 33 33% 96%;
+    --foreground: 22 38% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 22 38% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 22 38% 11%;
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 40% 94%;
+    --secondary-foreground: 22 38% 11%;
+    --muted: 30 33% 93%;
+    --muted-foreground: 24 12% 42%;
+    --accent: 32 100% 95%;
+    --accent-foreground: 25 95% 45%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 28 32% 87%;
+    --input: 28 32% 87%;
+    --ring: 25 95% 53%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    background-image: radial-gradient(1200px 620px at 50% -100px, #ffedd5 0%, #fdf6ee 55%);
+    background-repeat: no-repeat;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-orange-500 to-amber-400 bg-clip-text text-transparent;
+  }
+}
