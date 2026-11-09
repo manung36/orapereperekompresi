@@ -14,8 +14,8 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"]
     }
   },
-  "include": ["src"]
+  "include": ["./**/*.ts", "./**/*.tsx"]
 }
